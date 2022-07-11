@@ -30,7 +30,16 @@ val test8 = number_before_reaching_sum (10, [1,2,3,4,5]) = 3
 
 val test9 = what_month 70 = 3
 
-(* val test10 = month_range (31, 34) = [1,2,2,2] *)
+val test10 = month_range (31, 34) = [1,2,2,2]
 
 val test11A = oldest([(2012,2,28),(2011,3,31),(2011,4,28)]) = SOME (2011,3,31)
 val test11B = oldest([]) = NONE
+
+val test12 = number_in_months_challenge ([(2012,2,28),(2013,12,1),(2011,3,31),(2011,4,28)],[2,2,3,3,4]) = 3
+
+val test13A = reasonable_date((2012, 5, 5)) = true
+val test13B = reasonable_date((~456, 5, 5)) = false
+val test13C = reasonable_date((2012, ~5, 5)) = false
+val test13D = reasonable_date((2012, 96, 5)) = false
+val test13E = reasonable_date((2012, 5, ~5)) = false
+val test13F = reasonable_date((2024, 2, 29)) = true
